@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Development Version",
+            "type": "shell",
+            "command": "sass concrete.scss dist/concrete.css"
+        },
+        {
+            "label": "Development Version without helpers",
+            "type": "shell",
+            "command": "sass concrete-nohelpers.scss dist/concrete-nohelpers.css"
+        },
+        {
+            "label": "Production Version",
+            "type": "shell",
+            "command": "sass concrete.scss dist/concrete.min.css --style compressed"
+        },
+        {
+            "label": "Production Version without Helpers",
+            "type": "shell",
+            "command": "sass concrete-nohelpers.scss dist/concrete-nohelpers.min.css --style compressed"
+        },
+        {
+            "label": "Build all",
+            "dependsOn": [
+                "Development Version",
+                "Development Version without helpers",
+                "Production Version",
+                "Production Version without Helpers"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
