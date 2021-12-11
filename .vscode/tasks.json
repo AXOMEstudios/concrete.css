@@ -16,12 +16,12 @@
         {
             "label": "Production Version",
             "type": "shell",
-            "command": "sass concrete.scss dist/concrete.min.css --style compressed"
+            "command": "sass concrete.scss dist/concrete.min.css --style compressed --sourcemap=none"
         },
         {
             "label": "Production Version without Helpers",
             "type": "shell",
-            "command": "sass concrete-nohelpers.scss dist/concrete-nohelpers.min.css --style compressed"
+            "command": "sass concrete-nohelpers.scss dist/concrete-nohelpers.min.css --style compressed --sourcemap=none"
         },
         {
             "label": "Build all",
