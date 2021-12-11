@@ -1,0 +1,25 @@
+.alert {
+    border-radius: $round;
+    padding: $section-padding;
+    margin: $section-margin;
+    &.success {
+        background-color: lighten($success, 25%);
+        color: darken($success, 50%);
+        border-left: $border-size-1 solid $success;
+    }
+    &.primary {
+        background-color: lighten($primary, 25%);
+        color: darken($primary, 50%);
+        border-left: $border-size-1 solid $primary;
+    }
+    &.danger {
+        background-color: lighten($danger, 25%);
+        color: darken($danger, 50%);
+        border-left: $border-size-1 solid $danger;
+    }
+    &.warning {
+        background-color: lighten($warning, 25%);
+        color: darken($warning, 50%);
+        border-left: $border-size-1 solid $warning;
+    }
+}

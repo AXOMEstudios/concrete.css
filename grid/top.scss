@@ -1,0 +1,5 @@
+.topbar {
+    padding: $section-padding;
+    grid-area: top;
+    width: calc(100% - $section-padding*2);
+}

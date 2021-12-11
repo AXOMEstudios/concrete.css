@@ -1,0 +1,24 @@
+.sidebar {
+    grid-area: sidebar;
+    margin: $section-margin;
+    background: white;
+    border-radius: $round;
+    border-left: $lightgrey solid $border-size-1;
+    list-style: none;
+    height: 100%;
+    padding-left: 0;
+    &>* {
+        padding: $box-padding;
+        margin: $box-padding;
+        transition: $short-transition;
+        border-radius: $round;
+        cursor: pointer;
+
+        &:hover {
+            background: $lightgrey;
+        }
+        &:active {  
+            background: lighten($primary, 25%);
+        }
+    }
+}

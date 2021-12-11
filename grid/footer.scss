@@ -1,0 +1,25 @@
+.footer {
+    grid-area: footer;
+    background-color: lighten($lightgrey, 10%);
+    width: 100%;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    &>*:not(.columns) {
+        padding-left: $section-padding;
+        padding-right: $section-padding;
+    }
+    margin: 0;
+    text-align: left;
+    color: black;
+    &>.columns {
+        display: flex;
+        padding: -$section-padding;
+        &>*{
+            flex: 1;
+        }
+    }
+    &.dark {
+        background-color: black;
+        color: $lightgrey;
+    }
+}

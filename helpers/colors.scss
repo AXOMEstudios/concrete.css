@@ -1,0 +1,14 @@
+@each $name, $color in $colors-map {
+    .tint-#{$name} {
+        background-color: $color;
+        color: darken($color, 50%);
+    }
+    .tint-#{$name}-light {
+        background-color: lighten($color, 25%);
+        color: darken($color, 75%);
+    }
+    .tint-#{$name}-dark {
+        background-color: darken($color, 25%);
+        color: lighten($color, 50%);
+    }
+}

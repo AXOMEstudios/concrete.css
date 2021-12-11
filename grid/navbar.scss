@@ -1,0 +1,50 @@
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    align-items: center;
+    width: calc(100% - $box-padding*2);
+    max-height: $navbar-height;
+    padding: $box-padding;
+    &.centered {
+        justify-content: center;
+    }
+    &.left {
+        justify-content: flex-start;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+    
+    &>.icon {
+        position: relative;
+        height: calc($navbar-height - $box-padding);
+        width: auto;
+        transition: $short-transition;
+        cursor: pointer;
+
+        &:active {
+            opacity: 0.25;
+        }
+    }
+    &>.items {
+        list-style: none;
+        display: inherit;
+        &>* {
+            padding: $box-padding;
+            padding-left: $box-padding * 2;
+            padding-right: $box-padding * 2;
+            margin-left: $box-padding;
+            margin-right: $box-padding;
+            cursor: pointer;
+            transition: $short-transition;
+            border-radius: $round;
+
+            &:hover {
+                background: $lightgrey;
+            }
+            &:active {
+                background: lighten($primary, 25%);
+            }
+        }
+    }
+}

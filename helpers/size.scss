@@ -1,0 +1,12 @@
+@for $i from 1 through 5 {
+    .width-#{$i} {
+        width: percentage($i*.2) !important;
+    }
+    .height-#{$i} {
+        height: percentage($i*.2) !important;
+    }
+    .size-#{$i} {
+        width: percentage($i*.2) !important;
+        height: percentage($i*.2) !important;
+    }
+}

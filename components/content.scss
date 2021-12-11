@@ -1,0 +1,12 @@
+.content {
+    padding: $section-padding;
+    margin: $section-margin;
+    font-size: $text-size;
+    grid-area: content;
+
+    &>.heading {
+        font-size: $heading-1-size !important;
+        border-bottom: $border-size-2 solid $lightgrey;
+        margin-bottom: $section-margin;
+    }
+}

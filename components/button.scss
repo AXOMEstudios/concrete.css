@@ -1,0 +1,28 @@
+.button {
+    border: none;
+    border-radius: 0.75rem;
+    color: white;
+    padding: calc(1em + $border-size-2);
+    transition: .5s;
+    background-color: $primary;
+    &:hover:not(:disabled) {
+        box-shadow: 0 2px 5px lighten($primary, 25%);
+    }
+    &:active {
+        background-color: lighten($primary, 25%);
+    }
+
+    &.framed {
+        border: $primary solid $border-size-2;
+        background-color: white;
+        color: $primary;
+        padding: 1em;
+    }
+    &.framed:active {
+        background-color: lighten($primary, 25%);
+    }
+
+    &:disabled {
+        background-color: lighten($primary, 25%);
+    }
+}

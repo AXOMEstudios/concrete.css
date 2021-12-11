@@ -1,0 +1,16 @@
+.box {
+    border: $border-size-3 solid $lightgrey;
+    border-radius: $round;
+    box-shadow: 0 3px 5px lightgray;
+    padding: $box-padding;
+    margin: $section-margin;
+    background-color: white;
+    &.not-padded {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    &>.padded {
+        padding-left: $box-padding;
+        padding-right: $box-padding;
+    }
+}

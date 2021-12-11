@@ -1,0 +1,13 @@
+.site {
+    display: grid;
+    grid-template-areas: 
+    "navbar  navbar  navbar "
+    "top     top     top    "
+    "content content sidebar"
+    "footer  footer  footer ";
+}
+
+@import "sidebar";
+@import "navbar";
+@import "footer";
+@import "top"

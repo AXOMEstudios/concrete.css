@@ -1,0 +1,17 @@
+@for $i from 1 through 10 {
+    .font-size-#{$i} {
+        font-size: #{$i / 2}em;
+    }
+}
+
+@each $name, $color in $colors-map {
+    .text-color-#{$name} {
+        color: $color !important;
+    }
+    .div-color-#{$name} {
+        color: $color !important;
+        &>* {
+            color: $color !important;
+        }
+    }
+}

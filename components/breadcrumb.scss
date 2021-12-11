@@ -1,0 +1,16 @@
+.breadcrumb {
+    display: inline-block;
+    list-style: none;
+    padding: $box-padding;
+    color: black;
+
+    &>* {
+        display: inline;
+        cursor: pointer;
+
+        &+li::before {
+            color: darken($lightgrey, 15%);
+            content: "/";
+        }
+    }
+}

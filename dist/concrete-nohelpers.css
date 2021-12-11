@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.section {
+  padding: 1em;
+  margin: 0.5em;
+}
+
+hr {
+  border: none;
+  border-top: lightgrey solid 2px;
+}
+
+.button {
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  padding: calc(1em + 2px);
+  transition: 0.5s;
+  background-color: #005aff;
+}
+.button:hover:not(:disabled) {
+  box-shadow: 0 2px 5px #80adff;
+}
+.button:active {
+  background-color: #80adff;
+}
+.button.framed {
+  border: #005aff solid 2px;
+  background-color: white;
+  color: #005aff;
+  padding: 1em;
+}
+.button.framed:active {
+  background-color: #80adff;
+}
+.button:disabled {
+  background-color: #80adff;
+}
+
+.content {
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 1em;
+  grid-area: content;
+}
+.content > .heading {
+  font-size: 2em !important;
+  border-bottom: 2px solid lightgrey;
+  margin-bottom: 0.5em;
+}
+
+.box {
+  border: 1px solid lightgrey;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 5px lightgray;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: white;
+}
+.box.not-padded {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.box > .padded {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.alert {
+  border-radius: 0.5em;
+  padding: 1em;
+  margin: 0.5em;
+}
+.alert.success {
+  background-color: #c2f9a9;
+  color: #0c2102;
+  border-left: 3px solid #6ef032;
+}
+.alert.primary {
+  background-color: #80adff;
+  color: black;
+  border-left: 3px solid #005aff;
+}
+.alert.danger {
+  background-color: #f9b8b2;
+  color: #2a0603;
+  border-left: 3px solid #f04b3c;
+}
+.alert.warning {
+  background-color: #ffeab2;
+  color: #322500;
+  border-left: 3px solid #ffc832;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal.hidden {
+  display: none !important;
+}
+
+.breadcrumb {
+  display: inline-block;
+  list-style: none;
+  padding: 0.5em;
+  color: black;
+}
+.breadcrumb > * {
+  display: inline;
+  cursor: pointer;
+}
+.breadcrumb > * + li::before {
+  color: #adadad;
+  content: "/";
+}
+
+.site {
+  display: grid;
+  grid-template-areas: "navbar  navbar  navbar " "top     top     top    " "content content sidebar" "footer  footer  footer ";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  margin: 0.5em;
+  background: white;
+  border-radius: 0.5em;
+  border-left: lightgrey solid 3px;
+  list-style: none;
+  height: 100%;
+  padding-left: 0;
+}
+.sidebar > * {
+  padding: 0.5em;
+  margin: 0.5em;
+  transition: 0.25s;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.sidebar > *:hover {
+  background: lightgrey;
+}
+.sidebar > *:active {
+  background: #80adff;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 1em);
+  max-height: 3em;
+  padding: 0.5em;
+}
+.navbar.centered {
+  justify-content: center;
+}
+.navbar.left {
+  justify-content: flex-start;
+}
+.navbar.right {
+  justify-content: flex-end;
+}
+.navbar > .icon {
+  position: relative;
+  height: 2.5em;
+  width: auto;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.navbar > .icon:active {
+  opacity: 0.25;
+}
+.navbar > .items {
+  list-style: none;
+  display: inherit;
+}
+.navbar > .items > * {
+  padding: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 0.5em;
+}
+.navbar > .items > *:hover {
+  background: lightgrey;
+}
+.navbar > .items > *:active {
+  background: #80adff;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ededed;
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin: 0;
+  text-align: left;
+  color: black;
+}
+.footer > *:not(.columns) {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.footer > .columns {
+  display: flex;
+  padding: -1em;
+}
+.footer > .columns > * {
+  flex: 1;
+}
+.footer.dark {
+  background-color: black;
+  color: lightgrey;
+}
+
+.topbar {
+  padding: 1em;
+  grid-area: top;
+  width: calc(100% - 2em);
+}
+
+/*# sourceMappingURL=concrete-nohelpers.css.map */
