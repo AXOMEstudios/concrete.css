@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build concrete.css development version
+        run: sass concrete.scss dist/concrete.css
+        
+      - name: Build concrete.css development version without helpers
+        run: sass concrete-nohelpers.scss dist/concrete-nohelpers.css
+        
+      - name: Build concrete.css production minified
+        run: sass concrete.scss dist/concrete.min.css --style compressed --sourcemap=none
+        
+      - name: Build concrete.css production minified without helpers
+        run: sass concrete-nohelpers.scss dist/concrete-nohelpers.min.css --style compressed --sourcemap=none
